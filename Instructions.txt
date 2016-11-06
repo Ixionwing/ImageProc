@@ -1,0 +1,38 @@
+1. To compile the code yourself, import this project into Eclipse.
+>> If only the source files are found, download the JavaCV .jars from 
+
+	*https://github.com/bytedeco/javacv
+
+   AS WELL AS missing classes as detailed in issue #225 of javacpp in
+
+	*https://github.com/bytedeco/javacpp-presets/files/290338/ffmpeg-3.0.2-1.2-fixed.zip
+
+   and follow the classpath linking instructions in the first link (Project -> Properties -> Java Build Path -> Libraries tab -> Add External JARs). The project uses the following .jars:
+
+	* ffmpeg-3.0.2-1.2.jar
+	* ffmpeg-windows-x86.jar
+	* javacpp.jar
+	* javacv.jar
+	* opencv-windows-x86.jar
+
+2. Once imported, run one of either program (MainPic or MainVid).
+
+3. Follow the on-screen prompts.
+
+A valid set of inputs for MainPic would be as follows:
+
+Image1.jpg		// loads Image1.jpg
+Image2.jpg		// loads Image2.jpg
+0			// measures the distance between the two images in grayscale 			   		   form
+
+----------
+
+A valid set of inputs for MainVid would be as follows:
+
+Beijing.avi		// loads Beijing.avi
+1500			// sets the isolated keyframe difference threshold to 1200
+20000			// sets the cumulative keyframe difference threshold to 20000
+n			// disables frame-by-frame reports (Prev RGB, KF RGB, cumulative 			   diffs)
+
+A video example of this program can be found in this link:
+https://www.youtube.com/watch?v=eKxd-0IB_ZI
